@@ -1,17 +1,103 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <title>生日祝福</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 600px;
+            transform: translateY(0);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            color: #c0392b;
+            font-size: 2.5em;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, #c0392b, #e67e22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .message {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #2c3e50;
+            position: relative;
+            padding: 20px;
+        }
+
+        .decorative-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e67e22, transparent);
+            width: 80%;
+            left: 10%;
+        }
+
+        .top-line { top: 0; }
+        .bottom-line { bottom: 0; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .blessings li {
+            list-style: none;
+            margin: 1em 0;
+            padding: 15px;
+            background: #fff3e0;
+            border-radius: 10px;
+            opacity: 0;
+            animation: slideIn 0.8s forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .blessings li:nth-child(1) { animation-delay: 0.5s; }
+        .blessings li:nth-child(2) { animation-delay: 1s; }
+        .blessings li:nth-child(3) { animation-delay: 1.5s; }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">hello 这是我的第一个代码</span></p>
+    <div class="card">
+        <h1>🎉 祝姑父生日快乐！🎂</h1>
+        <div class="message">
+            <div class="decorative-line top-line"></div>
+            <ul class="blessings">
+                <li>愿岁月静好，安康常伴</li>
+                <li>祝心想事成，万事胜意</li>
+                <li>盼笑口常开，青春永驻</li>
+            </ul>
+            <div class="decorative-line bottom-line"></div>
+        </div>
+        <p style="margin-top: 2em; color: #e67e22;">❤️ 来自 [你的名字] 的祝福 ❤️</p>
+    </div>
 </body>
 </html>
